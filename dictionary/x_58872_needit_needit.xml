@@ -1,4 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <database>
-    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection"/>
+    <element extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Requested For" max_length="60" name="u_requested_for" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Request Type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Formalities" sequence="0" value="formalities"/>
+                <element label="Legal" sequence="1" value="legal"/>
+                <element label="Human Resources" sequence="2" value="hr"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What needed" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="1" sequence="0" value="1"/>
+                <element label="2" sequence="1" value="2"/>
+                <element label="3" sequence="2" value="3"/>
+            </choice>
+        </element>
+    </element>
 </database>
